@@ -8,7 +8,7 @@ pipeline {
         }
          stage('build and SonarQube analysis') {
             steps {
-                sh 'mvn clean  package sonar:sonar'
+                sh 'mvn -DskipTests clean  package sonar:sonar'
             }
         }
     }
